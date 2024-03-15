@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>Sistema de Ordem de Serviço</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1 class="title">Sistema de Ordem de Serviço</h1>
+    <div class="container">
+      <form action="" class="form">
+        <div class="form-input">
+          <label for="clientName">Nome do cliente:</label>
+          <input id="clientName" type="text" placeholder="Nome do cliente">
+        </div>
+        <div class="form-input">
+          <label for="phoneNumber">Celular:</label>
+          <input id="phoneNumber" type="text" placeholder="Celular">
+          <input id="checkWhatsApp" type="checkbox">
+          <label for="checkWhatsApp">Esse número é WhatsApp</label>
+        </div>
+        <div class="form-input">
+          <label for="requestDate">Data do pedido:</label>
+          <input id="requestDate" type="text" placeholder="Data">
+        </div>
+        <div class="form-input">
+          <label for="brand">Marca do dispositivo:</label>
+          <input id="brand" type="text" placeholder="Marca">
+          <input id="hasCharger" type="checkbox">
+          <label for="hasCharger">Veio carregardor?</label>
+          <input id="isPoweringUp" type="checkbox">
+          <label for="isPoweringUp">Está ligando? Fazer um teste!</label>
+        </div>
+        <div class="form-input">
+          <label for="problem">Defeito/Reclamação:</label>
+          <br>
+          <textarea rows="2" cols="70"></textarea>
+        </div>
+        <div class="form-input">
+          <label for="techNote">Anotação Técnica</label>
+          <br>
+          <textarea id="techNote" rows="2" cols="70"></textarea>
+        </div>
+        <div class="form-input">
+          <input type="submit" value="Gerar Ordem">
+        </div>
+      </form>
+    </div>
+    
+    <script src="js/script.js"></script>
+  </body>
+</html>
