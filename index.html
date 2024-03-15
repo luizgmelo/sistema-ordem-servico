@@ -12,41 +12,43 @@
   <body>
     <h1 class="title">Sistema de Ordem de Serviço</h1>
     <div class="container">
-      <form action="" class="form">
+      <form action="pdf.php" class="form" method="get">
         <div class="form-input">
           <label for="clientName">Nome do cliente:</label>
-          <input id="clientName" type="text" placeholder="Nome do cliente">
+          <input id="clientName" name="clientName" type="text" placeholder="Nome do cliente" required>
         </div>
         <div class="form-input">
           <label for="phoneNumber">Celular:</label>
-          <input id="phoneNumber" type="text" placeholder="Celular">
-          <input id="checkWhatsApp" type="checkbox">
+          <input id="phoneNumber" name="phoneNumber" type="text" placeholder="Celular" required>
+        </div>
+        <div class="form-checkbox">
+          <input id="checkWhatsApp" name="checkWhatsApp" class="checkbox" type="checkbox">
           <label for="checkWhatsApp">Esse número é WhatsApp</label>
         </div>
         <div class="form-input">
           <label for="requestDate">Data do pedido:</label>
-          <input id="requestDate" type="text" placeholder="Data">
+          <input id="requestDate" name="requestDate" type="text" placeholder="Data">
         </div>
         <div class="form-input">
           <label for="brand">Marca do dispositivo:</label>
-          <input id="brand" type="text" placeholder="Marca">
-          <input id="hasCharger" type="checkbox">
-          <label for="hasCharger">Veio carregardor?</label>
-          <input id="isPoweringUp" type="checkbox">
-          <label for="isPoweringUp">Está ligando? Fazer um teste!</label>
+          <input id="brand" name="brand" type="text" placeholder="Marca">
         </div>
-        <div class="form-input">
+        <div class="form-checkbox">
+          <input id="hasCharger" class="checkbox" type="checkbox">
+          <label for="hasCharger" name="hasCharger">Veio carregador?</label>
+          <input id="isPoweringUp" class="checkbox" type="checkbox">
+          <label for="isPoweringUp" name="isPoweringUp">Está ligando? Fazer um teste!</label>
+        </div>
+        <div class="form-textarea">
           <label for="problem">Defeito/Reclamação:</label>
-          <br>
-          <textarea rows="2" cols="70"></textarea>
+          <textarea id="problem" name="problem" rows="2" cols="70" required></textarea>
+        </div>
+        <div class="form-textarea">
+          <label for="techNote">Anotação Técnica:</label>
+          <textarea id="techNote" name="techNote" rows="2" cols="70"></textarea>
         </div>
         <div class="form-input">
-          <label for="techNote">Anotação Técnica</label>
-          <br>
-          <textarea id="techNote" rows="2" cols="70"></textarea>
-        </div>
-        <div class="form-input">
-          <input type="submit" value="Gerar Ordem">
+          <input class="submit-button" type="submit" value="Gerar Ordem">
         </div>
       </form>
     </div>
