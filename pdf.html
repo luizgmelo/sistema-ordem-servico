@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>Relatório</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/pdf.css">
+    <link href="css/pdf.css" media="print" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body id="pdf">
+
+    <h1 class="title">Relatório de Ordem de Serviço</h1>
+    <h2 class="table-title">Serviço de manutenção de computador</h2>
+    <table class="table">
+      <tbody>
+        <tr>
+          <th scope="row">Cliente:</th>
+          <td>Nome do cliente</td>
+        </tr>
+        <tr>
+          <th scope="row">Celular:</th>
+          <td>Celular</td>
+        </tr>
+        <tr>
+          <th scope="row">Data do pedido:</th>
+          <td>Data</td>
+        </tr>
+        <tr>
+          <th>Marca:</th>
+          <td>Marca</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="col" colspan="2">Defeito/Reclamação</th>
+        </tr>
+        <tr>
+          <td colspan="2">Defeito</td>
+        </tr>
+        <tr>
+          <th scope="col" colspan="2">Anotação Técnica</th>
+        </tr>
+        <tr>
+          <td colspan="2">Anotação do técnico</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/pdf.js"></script>
+  </body>
+</html>
