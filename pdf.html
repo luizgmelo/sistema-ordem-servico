@@ -16,19 +16,19 @@
       <tbody>
         <tr>
           <th scope="row">Cliente:</th>
-          <td>Nome do cliente</td>
+          <td id="nameField"></td>
         </tr>
         <tr>
           <th scope="row">Celular:</th>
-          <td>Celular</td>
+          <td id="phoneField"></td>
         </tr>
         <tr>
           <th scope="row">Data do pedido:</th>
-          <td>Data</td>
+          <td id="dateField"></td>
         </tr>
         <tr>
           <th>Marca:</th>
-          <td>Marca</td>
+          <td id="brandField"></td>
         </tr>
       </tbody>
       <tfoot>
@@ -36,16 +36,38 @@
           <th scope="col" colspan="2">Defeito/Reclamação</th>
         </tr>
         <tr>
-          <td colspan="2">Defeito</td>
+          <td id="problemField" colspan="2"></td>
         </tr>
         <tr>
           <th scope="col" colspan="2">Anotação Técnica</th>
         </tr>
         <tr>
-          <td colspan="2">Anotação do técnico</td>
+          <td id="techNoteField" colspan="2"></td>
         </tr>
       </tfoot>
     </table>
+    <div class="d-flex justify-content-center gap-5 m-5">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="checkIsWhatsApp" disabled>
+        <label class="form-check-label" for="checkIsWhatsApp">
+          O número é WhatsApp
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="checkHasCharger" disabled>
+        <label class="form-check-label" for="checkHasCharger">
+          Veio com carregador
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="checkPoweringUp" disabled>
+        <label class="form-check-label" for="chechIsPoweringUp">
+          Está ligando
+        </label>
+      </div>
+    </div>
+
+    <button class="btn btn-primary d-block mx-auto"type="button">Gerar o PDF</button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/pdf.js"></script>

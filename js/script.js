@@ -14,11 +14,11 @@ submitButton.addEventListener("click", () => {
 
   localStorage.setItem('name', clientName.value);
   localStorage.setItem('phone', phoneNumber.value);
-  localStorage.setItem('isWhatsApp', isWhatsApp.value);
+  localStorage.setItem('isWhatsApp', isWhatsApp.checked);
   localStorage.setItem('date', requestDate.value);
   localStorage.setItem('brand', brand.value);
-  localStorage.setItem('hasCharger', hasCharger.value);
-  localStorage.setItem('isPoweringUp', isPoweringUp.value);
+  localStorage.setItem('hasCharger', hasCharger.checked);
+  localStorage.setItem('isPoweringUp', isPoweringUp.checked);
   localStorage.setItem('problem', problem.value);
   localStorage.setItem('techNote', techNote.value);
   location.replace("../pdf.html");
