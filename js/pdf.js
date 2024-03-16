@@ -46,5 +46,17 @@ document.body.onload = () => {
     checkIsPoweringUp.checked = false;
   }
 
+  function generatePdf() {
+    let element = document.getElementById('pdf');
+    let opt = {
+      margin: 15,
+      filename: 'ordem-de-servico.pdf',
+    }
+    html2pdf().set(opt).from(element).save();
+  }
+
+  const buttonGeneratePdf = document.getElementById("buttonGeneratePdf")
+  buttonGeneratePdf.addEventListener('click', generatePdf)
+
 }
 
