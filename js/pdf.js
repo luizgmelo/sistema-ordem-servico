@@ -12,7 +12,6 @@ document.body.onload = () => {
 
   const nameField = document.getElementById('nameField');
   const phoneField = document.getElementById('phoneField');
-  const isWhatsAppField = document.getElementById('isWhatsAppField')
   const requestDateField = document.getElementById('dateField');
   const brandField = document.getElementById('brandField');
   const problemField = document.getElementById('problemField');
@@ -23,25 +22,25 @@ document.body.onload = () => {
   const checkIsPoweringUp = document.getElementById('checkPoweringUp')
 
   nameField.textContent = clientName;
-  phoneField.textContent = `${phoneNumber} ${isWhatsApp}`;
+  phoneField.textContent = `${phoneNumber}`;
   requestDateField.textContent = requestDate;
   brandField.textContent = brand;
   problemField.textContent = problem;
   techNoteField.textContent = techNote;
 
-  if (isWhatsApp) {
+  if (isWhatsApp === "true") {
     checkIsWhatsApp.checked = true;
   } else {
     checkIsWhatsApp.checked = false;
   }
 
-  if (hasCharger) {
+  if (hasCharger === "true") {
     checkHasCharger.checked = true;
   } else {
     checkHasCharger.checked = false;
   }
 
-  if (isPoweringUp) {
+  if (isPoweringUp === "true") {
     checkIsPoweringUp.checked = true;
   } else {
     checkIsPoweringUp.checked = false;
