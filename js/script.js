@@ -1,5 +1,20 @@
 const submitButton = document.getElementById("submitButton");
 
+const getCurrentDate = () => {
+  const date = new Date()
+
+  let day = date.getDate()
+  day = day < 10 ? "0" + day : day
+  let month = date.getMonth() + 1
+  month = month < 10 ? "0" + month : month 
+  let year = date.getFullYear()
+
+  currentDateResult = `${day}/${month}/${year}`
+
+  requestDate.value = currentDateResult
+}
+
+getCurrentDate()
 
 submitButton.addEventListener("click", () => {
   const clientName = document.getElementById('clientName');
@@ -26,7 +41,10 @@ submitButton.addEventListener("click", () => {
   }
 
   const validateForm = () => {
-    if (validateClientName(clientName.value) && validatePhoneNumber(phoneNumber.value)) {
+    if (
+      validateClientName(clientName.value) && validatePhoneNumber(phoneNumber.value)
+      && validateProblem(problem.value)
+    ) {
       saveDataAndRedirect()
     }
   }
@@ -54,7 +72,17 @@ submitButton.addEventListener("click", () => {
       return true
     }
   }
-  
+
+  const validateProblem = (problem) => {
+    if (!problem) {
+      alert("Por favor digite o problema do cliente.")
+    } else if (problem.length < 15) {
+      alert("O problema do cliente deve ter no mínimo 15 caracteres")
+    } else {
+      return true
+    }
+  }
+
   validateForm()
 });
 
