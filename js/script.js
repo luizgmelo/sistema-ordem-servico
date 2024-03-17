@@ -25,6 +25,12 @@ submitButton.addEventListener("click", () => {
     location.replace("../pdf.html");
   }
 
+  const validateForm = () => {
+    if (validateClientName(clientName.value) && validatePhoneNumber(phoneNumber.value)) {
+      saveDataAndRedirect()
+    }
+  }
+
   const validateClientName = (name) => {
     const pattern = /^[a-zA-Z\s]+$/;
     if (!name) {
@@ -34,11 +40,24 @@ submitButton.addEventListener("click", () => {
       alert("Nome do cliente é inválido, Por favor verifique o nome do cliente");
     }
     else {
-      saveDataAndRedirect()
+      return true
     }
   }
   // <TO-DO Validar Celular, Data do pedido, marca, defeito e anotação técnica>
-  validateClientName(clientName.value)
+  const validatePhoneNumber = (number) => {
+    // (87) 3831-2121
+    // (87) 9 9695-6475
+    const pattern = /^\([0-9]{2}\)(3[0-9]{3}-[0-9]{4})|(9[0-9]{4}-[0-9]{4})$/
+    if (!number) {
+      alert("Por favor digite o número de celular do cliente.")
+    } else if (!pattern.test(number)) {
+      alert("Número de celular é inválido, Por favor verifique o número do cliente. Considere parênteses e traços")
+    } else {
+      return true
+    }
+  }
+  
+  validateForm()
 });
 
 
