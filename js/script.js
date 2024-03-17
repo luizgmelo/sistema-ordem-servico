@@ -43,10 +43,8 @@ submitButton.addEventListener("click", () => {
       return true
     }
   }
-  // <TO-DO Validar Celular, Data do pedido, marca, defeito e anotação técnica>
+
   const validatePhoneNumber = (number) => {
-    // (87) 3831-2121
-    // (87) 9 9695-6475
     const pattern = /^\([0-9]{2}\)(3[0-9]{3}-[0-9]{4})|(9[0-9]{4}-[0-9]{4})$/
     if (!number) {
       alert("Por favor digite o número de celular do cliente.")
