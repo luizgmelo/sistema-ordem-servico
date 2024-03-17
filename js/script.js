@@ -37,7 +37,7 @@ submitButton.addEventListener("click", () => {
     localStorage.setItem('isPoweringUp', isPoweringUp.checked);
     localStorage.setItem('problem', problem.value);
     localStorage.setItem('techNote', techNote.value);
-    location.replace("../pdf.html");
+    location.replace("../sistema-ordem-servico/pdf.html");
   }
 
   const validateForm = () => {
