@@ -2,7 +2,7 @@
 ## ! This project has a documentation in Portuguese Brazil
 
 ## Preview
-[Preview](previw-project.gif)
+![Preview](preview-project.gif)
 
 ## O que é esse projeto?
 O sistema ele é um gerador de ordem de serviço voltado para manutenção de computadores,
